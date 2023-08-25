@@ -1,5 +1,3 @@
-// content.js
-
 // マウスオーバーされた要素のXPathを取得する関数
 function getXPath(element) {
   if (!element) {
@@ -28,7 +26,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request.action === "getXPath") {
     const target = document.querySelector(':hover');
     const xpath = getXPath(target);
-
+    console.log(xpath)
     // XPathをバックグラウンドスクリプトに送信
     chrome.runtime.sendMessage({ action: "downloadXPath", xpath: xpath });
   }

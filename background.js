@@ -1,5 +1,3 @@
-// background.js
-
 // コンテキストメニューを作成
 chrome.contextMenus.create({
   title: "Save XPath to File",

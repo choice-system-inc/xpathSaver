@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "XPath Saver",
+  "version": "1.0",
+  "description": "Save XPath of hovered elements to a local file",
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "downloads",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "48": "icon48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
